@@ -1,0 +1,122 @@
+
+   #carousel1 .carousel-indicators .active {
+    background-color: red;
+  }
+  
+  #carousel1 .carousel-inner img {
+    width: 100%;
+  }
+  
+   .carousel-control {
+    width: 0;
+  }
+
+
+
+#carousel1 h1 {
+      font-size: 5vw;
+      line-height: 7vh;
+  }
+
+   #carousel1 .item {
+    min-height: 70vh;
+    background-size: cover;
+  }
+  
+   .carousel-control.left,
+   .carousel-control.right {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background-image: none;
+    background-repeat: no-repeat;
+    text-shadow: none;
+  }
+  
+  
+   .carousel-control .glyphicon-chevron-left,
+   .carousel-control .glyphicon-chevron-right,
+   .carousel-control .icon-prev,
+   .carousel-control .icon-next {
+    position: absolute;
+    top: 53%;
+    z-index: 5;
+    display: inline-block;
+  }
+  
+   .carousel-control .glyphicon-chevron-left,
+   .carousel-control .icon-prev {
+    left: 0;
+  }
+  
+   .glyphicon-chevron-right:before ,
+   .glyphicon-chevron-left:before 
+  {
+    color: black;
+  }
+  
+   .carousel-control .glyphicon-chevron-right,
+   .carousel-control .icon-next {
+    right: 0;
+  }
+  
+   .carousel-control.left span,
+   .carousel-control.right span {
+    background-color: white;
+  
+  }
+  
+   .carousel-control.left span {
+    padding: 5px 40px 35px 10px;
+  }
+  
+   .carousel-control.right span  {
+    padding: 5px 40px 35px 15px;
+  }
+  
+   .carousel-control.left span:hover,
+   .carousel-control.right span:hover {
+    opacity: .7;
+    filter: alpha(opacity=70);
+  }
+  
+  
+  /* Carousel Header Styles */
+  
+   .header-text {
+    position: absolute;
+    top: 37%;
+    left: 5.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+  }
+  
+   .header-text h2 {
+    font-size: 40px;
+  }
+  
+   .header-text h2 span {
+    padding: 10px;
+  }
+  
+   .header-text h3 span {
+    padding: 15px;
+  }
+
+   .header-text h1 {
+    color: white;
+  }
+
+
+
+@media (max-width: 767px) {
+
+   .item {   
+	min-height: 50vh;
+	}
+
+   h1 {
+    line-height: 22px;
+  }
+}
+ 
