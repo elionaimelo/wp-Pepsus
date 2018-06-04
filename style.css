@@ -119,4 +119,11 @@
     line-height: 22px;
   }
 }
- 
+
+#nf-field-15 {
+  border-color: #ccc;
+}
+
+input, textarea {
+  padding: 10px;
+}

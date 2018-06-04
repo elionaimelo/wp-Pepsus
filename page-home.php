@@ -1,17 +1,4 @@
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package pepsus
- */
-
 get_header();
 ?>
 
@@ -299,41 +286,8 @@ echo do_shortcode('[smartslider3 slider=1]');
 			
             <div class="row">
 
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <p>Página home</p>
 
-						<div class="col-md-4">
-							<div class="card-news">
-								<div class="card-news-image">
-									<img src="<?php echo get_template_directory_uri(); ?>/images/img-news.jpg" class="img-responsive" alt="">
-								</div>
-								<article class="card-news-infor">
-									<h5><?php the_title(); ?></h5>
-									<p>
-									<?php the_content(); ?>
-									</p>
-
-                                    <p><?php the_tags('Tags: ',','); ?></p>
-                                    <p>Categorias: <?php the_category(' ') ?></p>
-									<hr class="border-blue">
-								</article>
-
-								<a href="<?php the_permalink(); ?>" class="btn btn-color2">
-									Saiba mais
-								</a> 
-							</div>
-						</div>
-
-						<?php endwhile; ?>
-						<?php else : ?>
-
-						<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-							<h1>Nenhuma notícia encontrada</h1>
-						</div>
-
-				<?php endif; ?>
-					
-
-               
             </div>
         </div>
 	</section>
