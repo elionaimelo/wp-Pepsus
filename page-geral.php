@@ -93,7 +93,7 @@ get_header('inner');
         
                     <div class="row">
                     <?php 
-                        $args = array( 'post_type' => 'membros_pepsus', 'posts_per_page' => 10 );
+                        $args = array( 'post_type' => 'membros2', 'posts_per_page' => 10 );
 
                         $the_query = new WP_Query( $args ); 
 
@@ -118,7 +118,7 @@ get_header('inner');
                                                 
                                                 <h4><?php the_title(); ?></h4>
                                                 <h6><?php 
-                                                  echo do_shortcode('[rwmb_meta meta_key="prefix-profissao"]')
+                                                  the_cfc_field('infors', 'profissao');
                                                 ?></h6>
                                                 
                                                 <p>
@@ -128,7 +128,7 @@ get_header('inner');
                                         </article>
                                         <div class="social-buttons">
                                             <a href="<?php echo do_shortcode('[rwmb_meta meta_key="prefix-url_1"]')?>" target="_blank">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images//icon-lattes.png" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-lattes.png" alt="">
                                             </a>
             
                                             <a href="<?php echo do_shortcode('[rwmb_meta meta_key="prefix-url_2"]')?>" target="_blank">
@@ -172,7 +172,7 @@ get_header('inner');
                             <h2 class="title-border-left">Notícias</h2>
                     </div>
                     <div class="col-md-2">
-                            <a href="#" class="btn btn-default">
+                            <a href="noticias" class="btn btn-default">
                                     Todas as notícias
                                 </a> 
                     </div>
@@ -180,7 +180,48 @@ get_header('inner');
 			
             <div class="row">
 
-				// notícias ou outra coisa
+				<?php
+                   
+                    $args = array(
+                        'cat' => 6, //ID da sua categoria
+                        'posts_per_page ' => 3, // Número de posts a exibir
+                    );
+
+                    $novo_loop = new WP_Query( $args );
+
+                    if ( $novo_loop->have_posts() ) : while ( $novo_loop->have_posts() ) : $novo_loop->the_post();	
+                ?>
+                   <div class="col-md-4">
+							<div class="card-news">
+								<div class="card-news-image">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/img-news.jpg" class="img-responsive" alt="">
+								</div>
+								<article class="card-news-infor">
+									<h5><?php the_title(); ?></h5>
+									<p>
+									<?php the_content(); ?>
+									</p>
+
+                                    <p><?php the_tags('Tags: ',','); ?></p>
+                                    <p>Categorias: <?php the_category(' ') ?></p>
+									<hr class="border-blue">
+								</article>
+
+								<a href="<?php the_permalink(); ?>" class="btn btn-color2">
+									Saiba mais
+								</a> 
+							</div>
+						</div>
+                <?php
+                    endwhile;
+                    else :
+                ?>
+                    CASO NÃO EXISTA POSTS
+                <?php
+                    endif;
+                    // Reseta as queries
+                    wp_reset_postdata();
+                ?>
 					
 
                

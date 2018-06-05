@@ -54,7 +54,7 @@
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                   <i class="fa fa-bars"></i>
               </button>
-              <a class="navbar-brand" href="index.php">
+              <a class="navbar-brand" href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="logo img-responsive" alt="">
               </a>
           </div>

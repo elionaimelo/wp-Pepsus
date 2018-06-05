@@ -42,6 +42,8 @@ if ( ! function_exists( 'pepsus_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		add_theme_support( 'post-formats', array('video','image'));
+
 		// This theme uses wp_nav_menu() in one location.
 
 		require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
@@ -185,4 +187,6 @@ function your_prefix_get_meta_box( $meta_boxes ) {
 	return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'your_prefix_get_meta_box' );
+
+
 
