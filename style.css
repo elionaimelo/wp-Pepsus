@@ -127,3 +127,50 @@
 input, textarea {
   padding: 10px;
 }
+
+.barra-lateral section {
+  padding: 0px;
+}
+
+.barra-lateral #search-2 {
+  padding-bottom: 20px;
+}
+
+.barra-lateral #recent-posts-2 {
+  padding-bottom: 20px;
+}
+
+.barra-lateral .widget-title {
+  font-size: 28px;
+  line-height: 40px;
+
+  border-bottom: 1px solid #ccc;
+}
+.blog h2 {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.blog hr {
+  margin-top: 0px;
+}
+
+.categoria-posts a ,
+.card-news-infor span a
+{
+  color: #399eff;
+}
+
+.card-news-infor p {
+  margin-bottom: 0px;
+}
+
+#partner {
+  padding: 0px;
+  padding-bottom: 50px;
+}
+
+.data {
+  font-style: italic;
+}
+

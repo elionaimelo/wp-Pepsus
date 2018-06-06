@@ -68,7 +68,7 @@ echo do_shortcode('[smartslider3 slider=1]');
                             Os módulos de Extensão ofertados pelo PEPSUS são autoinstrucionais, com duração de 30h. Nessa forma de ingresso, a extensão pode ser livremente cursada por profissionais de saúde e estudantes da área. Existem mais de 30 módulos do PEPSUS...
                         </p>
 
-                        <a href="#" class="btn btn-color2">
+                        <a href="<?php echo home_url(); ?>/areas-de-atuacao" class="btn btn-color2">
                             Saiba mais
                         </a> 
                     </div>
@@ -81,7 +81,7 @@ echo do_shortcode('[smartslider3 slider=1]');
                             O aperfeiçoamento faz parte de uma área estratégica do PEPSUS centrada nas linhas de cuidado, que tem a Atenção Primária como foco da atenção. Os cursos de aperfeiçoamento possuem módulos específicos que, juntos, formam um itinerário formativo de 180h.
                         </p>
 
-                        <a href="#" class="btn btn-color2">
+                        <a href="<?php echo home_url(); ?>/areas-de-atuacao" class="btn btn-color2">
                             Saiba mais
                         </a> 
                     </div>
@@ -94,7 +94,7 @@ echo do_shortcode('[smartslider3 slider=1]');
                             O curso de Especialização em Saúde da Família possui duração de 48 semanas, com carga horária – CH total de 360h, sendo 345 a distância, via AVASUS, e 15h presenciais, no Seminário de Apresentação do Trabalho de Conclusão de Curso – TCC.
                         </p>
 
-                        <a href="#" class="btn btn-color2">
+                        <a href="<?php echo home_url(); ?>/areas-de-atuacao" class="btn btn-color2">
                             Saiba mais
                         </a> 
                     </div>
@@ -119,67 +119,7 @@ echo do_shortcode('[smartslider3 slider=1]');
         </div>
 	</section>
 	
-	<section id="members">
-                <div class="container">
-                    <h2 class="title-border-left">Membros</h2>
-
-
-                    <div class="row">
-                    <?php 
-                        $args = array( 'post_type' => 'membros2', 'posts_per_page' => 10 );
-
-                        $the_query = new WP_Query( $args ); 
-
-                        ?>
-
-                        <?php if ( $the_query->have_posts() ) : ?>
-
-                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-image">
-                                        
-                                        <?php
-                                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-                                                the_post_thumbnail( 'full', array( 'class'  => 'img-responsive' ) ); // show featured image
-                                            } 
-                                        ?>
-                                    </div>
-                                    <div class="card-infor">
-                                        <article>
-                                                
-                                                <h4><?php the_title(); ?></h4>
-                                                <h6><?php 
-                                                  the_cfc_field('infors', 'profissao');
-                                                ?></h6>
-                                                
-                                                <p>
-                                                    <?php the_content(); ?>
-                                                </p>
-                                                <hr class="border-blue">
-                                        </article>
-                                        <div class="social-buttons">
-                                            <a href="<?php echo do_shortcode('[rwmb_meta meta_key="prefix-url_1"]')?>" target="_blank">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-lattes.png" alt="">
-                                            </a>
-            
-                                            <a href="<?php echo do_shortcode('[rwmb_meta meta_key="prefix-url_2"]')?>" target="_blank">
-                                                <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php wp_reset_postdata(); ?>
-                            <?php endwhile; ?>
-                            <?php else:  ?>
-                                <p><?php _e( 'Houve um erro! Desculpe!' ); ?></p>
-                            <?php endif; ?>
-                            
-                    </div>
-                </div>
-            </section>
+    <?php include('inc/membros-part.php') ?>
 	
 	<section id="contact">
         <div class="container">
@@ -190,29 +130,8 @@ echo do_shortcode('[smartslider3 slider=1]');
                 </div>
 
                 <div class="col-md-9">
-                        <!-- <form method="POST" action="#" class="form-cont">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" placeholder="Nome">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Assunto">
-                            </div>
-
-                            <textarea class="form-control" rows="5" placeholder="Mensagem"></textarea>
-
-                            <br>
-
-                            
-                            <button type="submit" class="btn btn-color2 btn-lg">ENVIAR</button>
-                        </form> -->
 
                         <?php echo do_shortcode("[ninja_form id=4]"); ?>
-
                         
                 </div>
             </div>
@@ -220,26 +139,7 @@ echo do_shortcode('[smartslider3 slider=1]');
 	</section>
 
 
-	<section id="news">
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-10">
-                            <h2 class="title-border-left">Notícias</h2>
-                    </div>
-                    <div class="col-md-2">
-                            <a href="#" class="btn btn-default">
-                                    Todas as notícias
-                                </a> 
-                    </div>
-			</div>
-			
-            <div class="row">
-
-                <p>Página home</p>
-
-            </div>
-        </div>
-	</section>
+	<?php include('inc/noticias-part.php') ?>
 	
 	<section id="partner">
             <div class="container">
