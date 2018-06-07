@@ -39,11 +39,11 @@
                                                 <hr class="border-blue">
                                         </article>
                                         <div class="social-buttons">
-                                            <a href="<?php echo do_shortcode('[rwmb_meta meta_key="prefix-url_1"]')?>" target="_blank">
+                                            <a href="<?php echo the_cfc_field('infors', 'url-do-lattes');?>" target="_blank">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/images/icon-lattes.png" alt="">
                                             </a>
             
-                                            <a href="<?php echo do_shortcode('[rwmb_meta meta_key="prefix-url_2"]')?>" target="_blank">
+                                            <a href="<?php echo the_cfc_field('infors', 'url-do-facebook');?>" target="_blank">
                                                 <i class="fab fa-facebook"></i>
                                             </a>
                                         </div>
