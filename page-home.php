@@ -33,15 +33,7 @@ echo do_shortcode('[smartslider3 slider=1]');
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="title-border-left">Sobre</h2>
-                    <p>
-                        O Programa de Educação Permanente em Saúde da Família (PEPSUS) é uma iniciativa de qualificação em saúde para profissionais que atuam na Estratégia de Saúde da Família e no Núcleo de Apoio à Saúde da Família. O programa possibilita a construção autônoma de um itinerário formativo, com foco nas necessidades de educação permanente do profissional e do território de saúde. O PEPSUS possui módulos de extensão, cursos de aperfeiçoamento e curso de especialização em Saúde da Família.
-        
-    O PEPSUS foi idealizado pelos seus Coordenadores (Lyane Ramalho – Coordenadora Geral e José Adailton da Silva – Coordenador Pedagógico) em 2016, objetivando contemplar a Educação Permanente para todos os profissionais que atuam na Atenção Primária à Saúde.
-    
-    O desafio é que tais estratégias possibilitem que os alunos sejam protagonistas de seu processo de aprendizagem, estimulando e provocando transformações positivas nos serviços de saúde ao qual estão vinculados. O método adotado é o da problematização, proporcionando que o conhecimento prévio seja aperfeiçoado e retorne ao serviço favorecendo a multiplicação de saberes. 
-    
-                    </p>
+                    <?php if ( dynamic_sidebar('widget-1') ) : else : endif; ?>
                 </div>
                 <div class="col-md-6">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/img-sobre.jpg" class="img-responsive img-sobre center-block" alt="">

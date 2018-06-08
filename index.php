@@ -31,7 +31,7 @@ get_header('inner');
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a>
                             <br>
                             <!-- Mostra a data e um link para outros posts do mesmo autor. -->
-                            <small><?php the_time('F jS, Y') ?> por <?php the_author_posts_link() ?></small>
+                            <small><?php the_time('j \d\e F \d\e Y') ?> por <?php the_author_posts_link() ?></small>
 
                             <!-- Mostra o conteúdo do post em uma DIV -->
                             <div class="entry">

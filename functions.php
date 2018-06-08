@@ -126,6 +126,20 @@ function pepsus_widgets_init() {
 }
 add_action( 'widgets_init', 'pepsus_widgets_init' );
 
+
+function pepsus_widgets_init1() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sobre da Página Home', 'pepsus' ),
+		'id'            => 'widget-1',
+		'description'   => esc_html__( 'Widget sobre da home', 'pepsus' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'pepsus_widgets_init1' );
+
 /**
  * Enqueue scripts and styles.
  */

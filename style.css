@@ -174,3 +174,7 @@ input, textarea {
   font-style: italic;
 }
 
+
+.layout-post {
+  padding-top: 8vh;
+}

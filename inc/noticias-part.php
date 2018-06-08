@@ -36,7 +36,7 @@
 								</div>
 								<article class="card-news-infor">
                                     <h5><?php the_title(); ?></h5>
-                                    <p>Postado em <span><?php the_category(',') ?></span> Tags: <span><?php the_tags('',','); ?></span></p>
+                                    <p>Por <?php the_author_posts_link() ?> postado em <span><?php the_category(',') ?></span> Tags: <span><?php the_tags('',','); ?></span></p>
                                     <p class="data"><?php echo get_the_date(); ?></p>
 									<p>
                                     <?php 
