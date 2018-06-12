@@ -16,14 +16,19 @@ echo do_shortcode('[smartslider3 slider=1]');
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
-				<p class="infor-margin-top">Maecenas in nulla quam. Ut sem ex, iaculis sit amet hendrerit et, elementum nec ante.</p>
-			</div>
-			<div class="col-md-3">
-				<button class="btn btn-default pull-right">
-					SAIBA MAIS
-				</button>
-			</div>
+            
+                <div class="col-md-9">
+                    <p class="infor-margin-top">
+                    
+                         Conhece as comunidades práticas do PEPSUS?
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="btn btn-default pull-right button-margin-top">
+                        SAIBA MAIS
+                    </a>
+                </div>
+            
 		</div>
 	</div>
 

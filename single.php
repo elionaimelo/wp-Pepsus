@@ -43,14 +43,10 @@ get_header('inner');
                             <p class="categoria-posts">Postado em <?php the_category(', '); ?></p>
                             </div> <!-- Fecha a primeira DIV -->
 
-							<?php echo DISPLAY_ULTIMATE_PLUS(); ?>
+					<?php echo DISPLAY_ULTIMATE_PLUS(); ?>
 
-							<?php // If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
-
-							?>
+							
+                                                       
 
                             <!-- Termina o Loop (mas repare no "else" - veja próxima linha) -->
                             <?php endwhile; else: ?>

@@ -140,6 +140,16 @@ function pepsus_widgets_init1() {
 }
 add_action( 'widgets_init', 'pepsus_widgets_init1' );
 
+function pepsus_widgets_init2() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Rodapé', 'pepsus' ),
+		'id'            => 'widget-2',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+}
+add_action( 'widgets_init', 'pepsus_widgets_init2' );
+
 /**
  * Enqueue scripts and styles.
  */

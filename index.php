@@ -28,7 +28,7 @@ get_header('inner');
                             <!-- Mostra o título como um link para o link permanente do post -->
                             <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
                                 <hr>
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a>
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'full', array( 'class'  => 'img-responsive' ) ); ?></a>
                             <br>
                             <!-- Mostra a data e um link para outros posts do mesmo autor. -->
                             <small><?php the_time('j \d\e F \d\e Y') ?> por <?php the_author_posts_link() ?></small>

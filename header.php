@@ -1,10 +1,13 @@
 <!doctype html>
-<html class="no-js" <?php language_attributes(); ?>>
+  <html class="no-js" <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PEPSUS</title>
+    <title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
+    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->

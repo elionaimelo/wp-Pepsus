@@ -20,9 +20,10 @@
                             </nav>
                         </div>
                         <div class="col-md-1 col-xs-1">
-                            <a href="http://">
-                                <i class="fab fa-facebook footer-icon-social"></i>
-                            </a>
+                                <?php 
+                                    if(is_active_sidebar('widget-2'))
+                                        dynamic_sidebar('widget-2')
+                                ?>
                         </div>
                     </div>
         </div>
