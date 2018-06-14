@@ -152,16 +152,6 @@ input, textarea {
   margin-bottom: 25px;
 }
 
-.widget_text {
-  margin-top: 40px;
-}
-
-#news {
-  padding-top: 20px;
-}
-
-
-
 .blog hr {
   margin-top: 0px;
 }
@@ -178,7 +168,6 @@ input, textarea {
 
 #partner {
   padding: 0px;
-  padding-bottom: 50px;
 }
 
 .data {
